@@ -1,0 +1,161 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// COLORS
+
+// primary
+$c-Desaturated-Red: hsl(0, 36%, 70%);
+$c-Soft-Red: hsl(0, 93%, 68%);
+
+// neutral
+$c-Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans";
+	font-size: 16px;
+	color: $c-Desaturated-Red;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+	footer {
+		a {
+			font-size: 11px;
+		}
+	}
+}
+
+main{
+	max-width: 375px;
+
+	> img:first-child {
+		width: 120px;
+		padding: 25px;
+	}
+
+	.coming-soon {
+		text-align: center;
+
+		.text {
+			h1 {
+				font-size: 4rem;
+				font-weight: 300;
+				padding: 80px 0 30px 0;
+				letter-spacing: 10px;
+				line-height: 4.5rem;
+				text-transform: uppercase;
+
+				span {
+					font-size: 4rem;
+					font-weight: 400;
+					color: $c-Dark-Grayish-Red;
+				}
+			}
+	
+			p {
+				line-height: 1.5rem;
+			}
+
+		}
+
+		form {
+
+			.email {
+				display: flex;
+				justify-content: start;
+				width: 340px;
+				margin: auto;
+				position: relative;
+				margin-top: 50px;
+
+				input {
+					width: 100%;
+					height: 50px;
+					border-radius: 30px;
+					border: 1px solid $c-Desaturated-Red;
+					padding-left: 20px;
+				}
+
+				button {
+					position: absolute;
+					height: 52px;
+					width: 85px;
+					border-radius: 30px;
+					top: 50%;
+					transform: translate(0, -50%);
+					right: 0;
+					border: none;
+					background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+				}
+
+				button:hover {
+					background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 80%, 86%));
+					box-shadow: 3px 10px 10px;
+					cursor: pointer;
+				}
+
+				.error {
+					position: absolute;
+					display: none;
+
+					p {
+						position: relative;
+						left: -30px;
+						bottom: -60px;
+					}
+
+					img {
+						position: relative;
+						left: -60px;
+						top: 15px
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	
+	main {
+		display: flex;
+		max-width: none;
+		width: 100%;
+		height: 100vh;
+
+		.coming-soon {
+			margin: 80px;
+			text-align: start;
+
+			p {
+				padding-right: 100px;
+			}
+
+			form {
+				.email {
+					width: 100%;
+				
+					.error {
+						width: 100%;
+						justify-content: space-between;
+						p {
+							left: 20px;
+						}
+	
+						img {
+							position: relative;
+							left: auto;
+							right: 95px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

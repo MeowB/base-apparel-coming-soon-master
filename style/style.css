@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  color: #ce9797;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer a {
+  font-size: 11px;
+}
+
+main {
+  max-width: 375px;
+}
+main > img:first-child {
+  width: 120px;
+  padding: 25px;
+}
+main .coming-soon {
+  text-align: center;
+}
+main .coming-soon .text h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  padding: 80px 0 30px 0;
+  letter-spacing: 10px;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+}
+main .coming-soon .text h1 span {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #413a3a;
+}
+main .coming-soon .text p {
+  line-height: 1.5rem;
+}
+main .coming-soon form .email {
+  display: flex;
+  justify-content: start;
+  width: 340px;
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+}
+main .coming-soon form .email input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #ce9797;
+  padding-left: 20px;
+}
+main .coming-soon form .email button {
+  position: absolute;
+  height: 52px;
+  width: 85px;
+  border-radius: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  border: none;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+main .coming-soon form .email button:hover {
+  background-image: linear-gradient(135deg, white, #f8bfbf);
+  box-shadow: 3px 10px 10px;
+  cursor: pointer;
+}
+main .coming-soon form .email .error {
+  position: absolute;
+  display: none;
+}
+main .coming-soon form .email .error p {
+  position: relative;
+  left: -30px;
+  bottom: -60px;
+}
+main .coming-soon form .email .error img {
+  position: relative;
+  left: -60px;
+  top: 15px;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    display: flex;
+    max-width: none;
+    width: 100%;
+    height: 100vh;
+  }
+  main .coming-soon {
+    margin: 80px;
+    text-align: start;
+  }
+  main .coming-soon p {
+    padding-right: 100px;
+  }
+  main .coming-soon form .email {
+    width: 100%;
+  }
+  main .coming-soon form .email .error {
+    width: 100%;
+    justify-content: space-between;
+  }
+  main .coming-soon form .email .error p {
+    left: 20px;
+  }
+  main .coming-soon form .email .error img {
+    position: relative;
+    left: auto;
+    right: 95px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
