@@ -131,9 +131,10 @@ main{
 		height: 100vh;
 
 		.coming-soon {
-			margin: 80px 160px;
+			padding: 80px 160px;
 			text-align: start;
 			max-width: 550px;
+			background-image: url("../images/bg-pattern-desktop.svg");
 
 			p {
 				padding-right: 100px;

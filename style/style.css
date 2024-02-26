@@ -99,9 +99,10 @@ main .coming-soon form .email .error img {
     height: 100vh;
   }
   main .coming-soon {
-    margin: 80px 160px;
+    padding: 80px 160px;
     text-align: start;
     max-width: 550px;
+    background-image: url("../images/bg-pattern-desktop.svg");
   }
   main .coming-soon p {
     padding-right: 100px;
