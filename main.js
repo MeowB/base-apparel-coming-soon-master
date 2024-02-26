@@ -11,12 +11,13 @@ document.querySelector('form').addEventListener('submit', function(event) {
 	if (!regex.test(email)){
 		error.style.display = "flex"
 	}
-
-
 });
 
 // modify the layout from the size of the screen
-visualViewport.addEventListener("resize", () => {
+visualViewport.addEventListener("resize", layoutHideAndSeek)
+window.addEventListener("load", layoutHideAndSeek)
+
+function layoutHideAndSeek() {
 	let imgDesktop = document.querySelector(".hero-desktop")
 	let imgMobile = document.querySelector(".hero-mobile")
 	let logoDesktop = document.querySelector(".logo-desktop")
@@ -33,4 +34,4 @@ visualViewport.addEventListener("resize", () => {
 		logoDesktop.style.display = "flex";
 		logoMobile.style.display = "none"
 	}
-})
+}
